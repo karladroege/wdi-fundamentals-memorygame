@@ -1,3 +1,4 @@
+// create variables to store cards and cards in play
 var cards = [
   {
     rank: "queen",
@@ -22,6 +23,7 @@ var cards = [
 ];
 var cardsInPlay = [];
 
+// check for a match and alert the user
 var checkForMatch = function () {
   if (cardsInPlay[0] === cardsInPlay[1]) {
     alert("You found a match!");
@@ -29,6 +31,7 @@ var checkForMatch = function () {
     alert("Sorry, try again.");
   }
 };
+// flip the card(s) selected and check for # of cards played
 var flipCard = function () {
   var cardId = this.getAttribute("data-id");
   cardsInPlay.push (cards[cardId].rank);
@@ -40,6 +43,7 @@ var flipCard = function () {
     checkForMatch();
   }
 };
+// creates gane board
 var createBoard = function () {
   for(var i = 0; i < cards.length; i++) {
     var cardElement = document.createElement("img");
@@ -49,4 +53,5 @@ var createBoard = function () {
     document.getElementById("game-board").appendChild(cardElement);
   }
 };
+// executes program
 createBoard();

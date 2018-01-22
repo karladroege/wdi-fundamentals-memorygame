@@ -24,7 +24,7 @@ nav a {
   text-decoration: none;
 }
 a:hover {
-  border-bottom: white;
+  border-bottom: 2px solid white;
 }
 main {
   width: 850px;
